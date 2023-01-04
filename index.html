@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Panier d'achat</title>
+    <link rel="stylesheet" href="ressources/style.css">
+  </head>
+  <body>
+    <h1>Mon panier</h1>
+    <form id="add-item-form">
+      <label for="item-name">Nom de l'article :</label>
+      <input type="text" id="item-name" required>
+      <label for="item-price">Prix de l'article :</label>
+      <input type="number" id="item-price" min="0" required>
+      <label for="item-quantity">Quantité :</label>
+      <input type="number" id="item-quantity" min="1" required>
+      <label for="state">Etat :</label>
+      <select id="state">
+        <option value="UT">UT</option>
+        <option value="NV">NV</option>
+        <option value="TX">TX</option>
+        <option value="AL">AL</option>
+        <option value="CA">CA</option>
+      </select>
+      <button type="submit">Ajouter à mon panier</button>
+    </form>
+    <table id="cart">
+      <thead>
+        <tr>
+          <th>Article</th>
+          <th>Prix</th>
+          <th>Quantité</th>
+          <th>Sous-total</th>
+          <th>Supprimer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Articles du panier seront ajoutés ici -->
+      </tbody>
+    </table>
+    <div id="total" class="totals"></div>
+    <div id="discount" class="totals"></div>   
+  </body>
+    <script src="ressources/scrypt.js"></script>
+</html>
